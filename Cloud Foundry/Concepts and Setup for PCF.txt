@@ -1,0 +1,5 @@
+### Installing Eclipse STS for Mac
+### Installing the CF Command-line interface for Mac
+### Installing Gradle buildship plugin for Eclispe STS
+
+### Required Downloads - Eclispe STS v4.7.0, Eclispe Gradle Buildship plugin, Cloud Foundry Command Line Tool v6
