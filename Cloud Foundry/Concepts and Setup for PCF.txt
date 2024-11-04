@@ -3,3 +3,17 @@
 ### Installing Gradle buildship plugin for Eclispe STS
 
 ### Required Downloads - Eclispe STS v4.7.0, Eclispe Gradle Buildship plugin, Cloud Foundry Command Line Tool v6
+
+#### macOS X installation
+You can install the cf CLI on macOS X operating systems using the Homebrew package manager.
+
+To install the cf CLI for macOS X using Homebrew:
+
+Install Homebrew. For instructions, see Install Homebrew on the Homebrew website.
+
+To install cf CLI v7, run:
+
+brew install cloudfoundry/tap/cf-cli@7
+To install cf CLI v8, run:
+
+brew install cloudfoundry/tap/cf-cli@8
