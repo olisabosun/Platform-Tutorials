@@ -1,0 +1,29 @@
+Linux installation
+There are two ways to install the cf CLI using a package manager, depending on your Linux distribution.
+
+To install the cf CLI on Debian and Ubuntu-based Linux distributions:
+
+Add the Cloud Foundry Foundation public key and package repository to your system by running:
+
+wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo gpg --dearmor -o /usr/share/keyrings/cli.cloudfoundry.org.gpg
+echo "deb [signed-by=/usr/share/keyrings/cli.cloudfoundry.org.gpg] https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+Update your local package index by running:
+
+sudo apt-get update
+To install cf CLI v7, run:
+
+sudo apt-get install cf7-cli
+To install cf CLI v8, run:
+
+sudo apt-get install cf8-cli
+To install the cf CLI on Enterprise Linux and Fedora RHEL6/CentOS6 and later distributions:
+
+Configure the Cloud Foundry Foundation package repository by running:
+
+sudo wget -O /etc/yum.repos.d/cloudfoundry-cli.repo https://packages.cloudfoundry.org/fedora/cloudfoundry-cli.repo
+To install cf CLI v7, run:
+
+sudo yum install cf7-cli
+To install cf CLI v8, run:
+
+sudo yum install cf8-cli
