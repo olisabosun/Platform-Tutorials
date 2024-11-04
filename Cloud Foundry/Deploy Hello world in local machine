@@ -1,0 +1,22 @@
+### Important Dependencies on pom.xml for Springboot
+## Springboot Starter Web - used to create web applications with Springboot
+## Springboot Starter Test - build unit tests associated with the project.
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+1. Open Springboot Eclipse and import the downloaded zip file.
+2. Select RestfulWebServicesApplication.java and right click Run as Java Application.
+3. Vaildate from Readme.md that URLs are deployed.
+http://localhost:8080/hello-world/path-variable/in28minutes 
+http://localhost:8080/hello-world-bean 
+    
