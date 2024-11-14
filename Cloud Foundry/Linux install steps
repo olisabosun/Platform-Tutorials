@@ -27,3 +27,5 @@ sudo yum install cf7-cli
 To install cf CLI v8, run:
 
 sudo yum install cf8-cli
+
+Run cf --help to verify installation.
