@@ -1,0 +1,31 @@
+---
+- name: Update Root CA in Java Truststore and Restart JBoss
+    hosts: all
+    become: yes
+    tasks:
+        - name: Copy Root CA certificate to the target machine
+            copy:
+                src: /path/to/root-ca.crt
+                dest: /tmp/root-ca.crt
+                mode: '0644'
+
+        - name: Import Root CA into Java Truststore
+            command: >
+                keytool -import -trustcacerts
+                -file /tmp/root-ca.crt
+                -keystore /path/to/java/keystore.jks
+                -storepass changeit
+                -alias root-ca
+                -noprompt
+            args:
+                creates: /path/to/java/keystore.jks
+
+        - name: Restart JBoss service
+            service:
+                name: jboss
+                state: restarted
+
+        - name: Clean up Root CA certificate
+            file:
+                path: /tmp/root-ca.crt
+                state: absent
